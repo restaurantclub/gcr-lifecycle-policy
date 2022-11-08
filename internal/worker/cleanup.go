@@ -12,7 +12,7 @@ import (
 func cleanup(list FilteredList, c Config, auth *oauth2.Token) {
 
 	spaceClient := http.Client{
-		Timeout: time.Second * 10, // Timeout after 10 seconds
+		Timeout: time.Second * 60, // Timeout after 60 seconds
 	}
 
 	deleted := 0

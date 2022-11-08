@@ -26,6 +26,7 @@ test: ## Run unittests
 dep: ## Get the dependencies
 	@go get -v -d ./...
 	@go get -u golang.org/x/lint/golint
+	@go get -u golang.org/x/crypto/ssh/terminal@v0.1.0
 
 e2e: ## run E2E tests
 	./scripts/e2e.sh

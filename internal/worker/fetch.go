@@ -18,7 +18,7 @@ func fetchCatalog(c Config, auth *oauth2.Token) Catalog {
 	log.Debugf("fetching catalog from url %s", url)
 
 	spaceClient := http.Client{
-		Timeout: time.Second * 10, // Timeout after 10 seconds
+		Timeout: time.Second * 60, // Timeout after 60 seconds
 	}
 
 	body, err := getWithAuth(spaceClient, url, auth.AccessToken)
